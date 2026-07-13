@@ -1,15 +1,15 @@
 [
 {
-  "modid": "inspectanimationsantique",
-  "name": "Inspect Animations Antique",
+  "modid": "inspectanimations",
+  "name": "Inspect Animations",
   "description": "",
-  "version": "1.0.0",
+  "version": "0.2.1",
   "mcversion": "1.12.2",
-  "url": "https://github.com/xy177/Inspect-Animations-Antique",
+  "url": "https://github.com/xy177/Inspect-Animations",
   "updateUrl": "",
   "authorList": ["xy177"],
   "credits": "Original Inspect Animations by SoundsoftheSun.",
-  "logoFile": "assets/inspectanimationsantique/icon.png",
+  "logoFile": "assets/inspectanimations/icon.png",
   "screenshots": [],
   "dependencies": []
 }
