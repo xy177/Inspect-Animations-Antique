@@ -1,0 +1,16 @@
+[
+{
+  "modid": "inspectanimationsantique",
+  "name": "Inspect Animations Antique",
+  "description": "",
+  "version": "1.0.0",
+  "mcversion": "1.12.2",
+  "url": "https://github.com/xy177/Inspect-Animations-Antique",
+  "updateUrl": "",
+  "authorList": ["xy177"],
+  "credits": "Original Inspect Animations by SoundsoftheSun.",
+  "logoFile": "assets/inspectanimationsantique/icon.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
