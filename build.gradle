@@ -17,8 +17,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '0.2.1'
-group = 'xy177.inspectanimations'
-archivesBaseName = 'inspectanimations'
+group = 'xy177.inspectanimationsantique'
+archivesBaseName = 'inspect_animations_antique'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -40,7 +40,7 @@ minecraft {
         client {
             workingDirectory project.file('run')
             property 'fml.coreMods.load', 'zone.rong.mixinbooter.MixinBooterPlugin'
-            args '--mixin', 'mixins.inspectanimations.json'
+            args '--mixin', 'mixins.inspect_animations_antique.json'
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -51,7 +51,7 @@ minecraft {
 
         server {
             property 'fml.coreMods.load', 'zone.rong.mixinbooter.MixinBooterPlugin'
-            args '--mixin', 'mixins.inspectanimations.json'
+            args '--mixin', 'mixins.inspect_animations_antique.json'
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -95,7 +95,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, 'mixins.inspectanimations.refmap.json'
+    add sourceSets.main, 'mixins.inspect_animations_antique.refmap.json'
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
@@ -106,13 +106,13 @@ jar {
     }
     manifest {
         attributes([
-            "Specification-Title": "Inspect Animations",
+            "Specification-Title": "Inspect Animations Antique",
             "Specification-Vendor": "xy177",
             "Specification-Version": "${version}",
-            "Implementation-Title": "Inspect Animations",
+            "Implementation-Title": "Inspect Animations Antique",
             "Implementation-Version": "${version}",
             "Implementation-Vendor": "xy177",
-            "MixinConfigs": "mixins.inspectanimations.json",
+            "MixinConfigs": "mixins.inspect_animations_antique.json",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
@@ -127,7 +127,7 @@ jar.finalizedBy('reobfJar')
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'inspectanimations'
+            artifactId = 'inspect_animations_antique'
             artifact jar
         }
     }

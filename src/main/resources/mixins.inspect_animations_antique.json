@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xy177.inspectanimationsantique.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "mixins.inspect_animations_antique.refmap.json",
+  "client": [
+    "AbstractClientPlayerMixin",
+    "ItemRendererMixin",
+    "LayerHeldItemMixin",
+    "ModelBipedMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
