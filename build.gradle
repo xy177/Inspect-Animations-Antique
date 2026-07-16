@@ -16,7 +16,7 @@ apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '0.2.1'
+version = '0.2.1a'
 group = 'xy177.inspectanimationsantique'
 archivesBaseName = 'inspect_animations_antique'
 
@@ -39,8 +39,7 @@ minecraft {
     runs {
         client {
             workingDirectory project.file('run')
-            property 'fml.coreMods.load', 'zone.rong.mixinbooter.MixinBooterPlugin'
-            args '--mixin', 'mixins.inspect_animations_antique.json'
+            property 'fml.coreMods.load', 'zone.rong.mixinbooter.MixinBooterPlugin,xy177.inspectanimationsantique.core.InspectAnimationsMixinLoader'
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -50,8 +49,7 @@ minecraft {
         }
 
         server {
-            property 'fml.coreMods.load', 'zone.rong.mixinbooter.MixinBooterPlugin'
-            args '--mixin', 'mixins.inspect_animations_antique.json'
+            property 'fml.coreMods.load', 'zone.rong.mixinbooter.MixinBooterPlugin,xy177.inspectanimationsantique.core.InspectAnimationsMixinLoader'
 
             // Recommended logging data for a userdev environment
             property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
@@ -112,6 +110,8 @@ jar {
             "Implementation-Title": "Inspect Animations Antique",
             "Implementation-Version": "${version}",
             "Implementation-Vendor": "xy177",
+            "FMLCorePlugin": "xy177.inspectanimationsantique.core.InspectAnimationsMixinLoader",
+            "FMLCorePluginContainsFMLMod": "true",
             "MixinConfigs": "mixins.inspect_animations_antique.json",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])

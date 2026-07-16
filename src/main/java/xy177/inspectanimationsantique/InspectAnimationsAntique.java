@@ -19,12 +19,12 @@ import java.util.Map;
         name = InspectAnimationsAntique.NAME,
         version = InspectAnimationsAntique.VERSION,
         acceptedMinecraftVersions = "[1.12.2]",
-        dependencies = "required-after:mixinbooter@[11.5,)"
+        dependencies = "required-after:mixinbooter@[10.7,)"
 )
 public class InspectAnimationsAntique {
     public static final String MOD_ID = "inspect_animations_antique";
     public static final String NAME = "Inspect Animations Antique";
-    public static final String VERSION = "0.2.1";
+    public static final String VERSION = "0.2.1a";
 
     @SidedProxy(
             clientSide = "xy177.inspectanimationsantique.proxy.ClientProxy",
